@@ -68,30 +68,36 @@ public class PageDebit {
     public void shouldValueFieldNumberCard() {
         var fieldNumberCard = resultLinks.find(text("Номер карты")).parent();
         fieldNumberCard.shouldHave(text("Неверный формат"));
+        fieldNumberCard.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
     public void shouldValueFieldMonth() {
         var fieldMonth = resultLinks.find(text("Месяц")).parent();
         fieldMonth.shouldHave(text("Неверный формат"));
+        fieldMonth.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
     public void shouldValueFieldYear() {
         var fieldYear = resultLinks.find(text("Год")).parent();
         fieldYear.shouldHave(text("Неверный формат"));
+        fieldYear.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
     public void shouldValueFieldCVV() {
         var fieldCVV = resultLinks.find(text("CVC/CVV")).parent();
         fieldCVV.shouldHave(text("Неверный формат"));
+        fieldCVV.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
     public void shouldValueFieldHolder() {
         var fieldHolderCard = resultLinks.find(text("Владелец")).parent();
         fieldHolderCard.shouldHave(text("Поле обязательно для заполнения"));
+        fieldHolderCard.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
     public void shouldValidFieldHolder() {
         var fieldCardHolder = resultLinks.find(text("Владелец")).parent();
         fieldCardHolder.shouldHave(text("Неверный формат"));
+        fieldCardHolder.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 }
